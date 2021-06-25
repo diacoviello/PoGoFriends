@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-// import API from "../utils/API";
-// import Axios from "axios";
+import API from "../utils/API";
+import Axios from "axios";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -90,7 +90,7 @@ export default function UserLogin() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            myConcerts Log in
+            PoGoFriends Log in
           </Typography>
           <form className={classes.form} noValidate>
             <TextField

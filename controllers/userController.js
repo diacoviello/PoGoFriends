@@ -4,7 +4,7 @@ const db = require("../models");
 module.exports = {
   findAll: function (req, res) {
     db.User.find({})
-      .populate("events")
+      .populate("friends")
 
       // .sort({ date: -1 })
       .then((dbResults) => res.json(dbResults))
@@ -19,7 +19,6 @@ module.exports = {
     console.log("controller - create: ", req.body);
     db.User.create(req.body)
       .then((dbResults) => {
-        // res.redirect(307, "/login");
         res.json(dbResults);
       })
       .catch((err) => res.status(401).json(err));

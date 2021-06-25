@@ -19,8 +19,10 @@ _Clone down this repository. You will need node and npm installed globally on yo
 
 > Installation:
 
-    `npm install`
+    `npm i axios`
     `npm i react-router-dom`
+    `npm install @material-ui/icons`
+    `npm install @material-ui/core`
 
 > To Run Test Suite:
 

@@ -8,20 +8,19 @@ const UserSchema = new Schema({
     required: true,
     unique: true,
   },
+  pogoIGN: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   password: {
     type: String,
     required: true,
   },
-  Event: [
+  Friend: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Event",
-    },
-  ],
-  PastEvent: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "PastEvent",
+      ref: "Friend",
     },
   ],
 });
@@ -34,6 +33,7 @@ UserSchema.methods = {
     return bcrypt.hashSync(plainTextPassword, 10);
   },
 };
+
 // refactor code to work using bcrpyt in mongoose
 UserSchema.pre("save", function (next) {
   console.log("UserSchema.pre('save'): ", this);
