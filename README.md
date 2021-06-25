@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# PoGo Friends
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+> In the world of Pokemon Go, as in most video games, there are XP (experience points) requirements for players to level up. At this time, the most efficient way to level up involves daily interactions with your in game friends, because once you both hit "Best Friends" status, and with a 'lucky egg' deployed, you and your friend can get 200k xp in one shot! Lucky eggs double the xp accumulated, but cost money, so ideally we want to be able to line up *when* we hit Best Friend status with our friends so that we can make as many of them happen all at once.<p> In game right now, it is not an easy thing to be able to track, and even more confusing when you try and implement a system and miss a day. This application will be for users to monitor and keep track of how far along they are with all of their friends, and coordinate when to open gifts in order to maximize xp output on one lucky egg.
 
-In the project directory, you can run:
+### Project Goals
+>Create an online application that users can manually input their Pokemon Go friends and be able to track their friendship progress daily to maximize XP rewards and save money on 'Lucky Eggs'.
+- Users can log in and obtain saved information from the previous day. 
+- Users can add or subtract the number of day interactions to monitor their progress.
+- Users can add or delete friends to this application.
+- Users can see a list of all their friends added and sort them.
 
-### `npm start`
+### Installation & Setup Instructions
+_Clone down this repository. You will need node and npm installed globally on your machine._<p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+>Installation:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    `npm install`
 
-### `npm test`
+>To Run Test Suite:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    `npm test`
 
-### `npm run build`
+>To Start Server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+>To Visit App:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    `localhost:3000/pogofriends`
