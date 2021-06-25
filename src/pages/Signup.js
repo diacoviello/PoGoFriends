@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import Axios from "axios";
 import API from "../utils/API";
-// import Axios from "axios";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -66,20 +66,30 @@ const useStyles = makeStyles((theme) => ({
 
 export default function UserLogin() {
   const classes = useStyles();
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
 
-  const handleLogin = () => {
-    API.login({
-      email: loginEmail,
-      password: loginPassword,
+  const handleSignup = () => {
+    API.signup({
+      email: registerEmail,
+      password: registerPassword,
     })
       .then(console.log("success!!!!"))
       .catch((err) => console.log(err));
   };
-  console.log(loginEmail);
-  console.log(loginPassword);
-
+  // const register = () => {
+  //   Axios({
+  //     method: "POST",
+  //     data: {
+  //       email: registerEmail,
+  //       password: registerPassword,
+  //     },
+  //     withCredentials: true,
+  //     // url: "http://localhost:3001/api/signup",
+  //   }).then((res) => console.log(res));
+  // };
+  console.log(registerEmail);
+  console.log(registerPassword);
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -90,7 +100,7 @@ export default function UserLogin() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            myConcerts Log in
+            myConcerts Sign Up
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
@@ -103,7 +113,7 @@ export default function UserLogin() {
               name="email"
               autoComplete="email"
               autoFocus
-              onChange={(e) => setLoginEmail(e.target.value)}
+              onChange={(e) => setRegisterEmail(e.target.value)}
             />
             <TextField
               variant="outlined"
@@ -115,7 +125,7 @@ export default function UserLogin() {
               type="password"
               id="password"
               autoComplete="current-password"
-              onChange={(e) => setLoginPassword(e.target.value)}
+              onChange={(e) => setRegisterPassword(e.target.value)}
             />
             <Button
               type="submit"
@@ -123,15 +133,15 @@ export default function UserLogin() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              href="/user"
-              onClick={() => handleLogin()}
+              href="/login"
+              onClick={() => handleSignup()}
             >
-              Log In
+              Sign Up
             </Button>
             <Grid container>
               <Grid item>
-                <Link href="/signup" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                <Link href="/login" variant="body2">
+                  {"Have an account? Log In instead..."}
                 </Link>
               </Grid>
             </Grid>

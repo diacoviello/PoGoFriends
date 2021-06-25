@@ -1,19 +1,30 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "../src/pages/Login";
+import Signup from "../src/pages/Signup";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Welcome to PoGoFriends.
-        </p>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          {/* <Route exact path="/">
+            <Welcome />
+          </Route> */}
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
+          </Route>
+          {/* <Route exact path="/home">
+            <Home />
+          </Route> */}
+        </Switch>
+      </div>
+    </Router>
+    
   );
 }
 
